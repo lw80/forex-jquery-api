@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $.ajax({
+                    url: 'http://api.apirates.com/jsonp/update',
+                    dataType: 'jsonp',
+                    success: function(data){
+                        
+                        $('#ForexFeed').html(JSON.stringify(data));
+                    }
+                });
+            })
+        </script>
+    </head>
+    <body>
+        <div id='ForexFeed'></div>
+    </body>
+</html>
